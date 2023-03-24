@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<head>
+  <title>Bird Detection</title>
+  <style>
+   ul {
+  list-style-type: none;
+}
+    body {
+      background-image: url('banner.jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: 100% 100%;
+      }
+    h1 {
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-size: 48px;
+      color: red;
+      animation: wave 5s ease-in-out infinite;
+      text-align: center;
+    }
+   
+    @keyframes wave {
+      0% {
+        transform: translateY(0);
+      }
+      20% {
+        transform: translateY(-20px);
+      }
+      40% {
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <table style="width:100%">  
+  <tr>
+  <h1 style="text-align:center">Bird Species</h1>
+  </tr>  
+   
+  <tr style="background:rgb(41, 160, 98)">
+    <td align="center" style="padding:10px;">Home</td>
+   
+    </tr>
+ 
+  <tr>
+  <td colspan="4" style="padding:30px;">
+  <h2>About vedanthangal bird sanctuary</h2>  
+  <p>
+    Vedanthangal Bird Sanctuary is a 30-hectare (74-acre) protected area located in the Madurantakam taluk of the Chengalpattu District in the state of Tamil Nadu, India. The sanctuary is about 75 kilometres from Chennai on National Highway 45. It is easily reachable from Madurantakam and Chengalpattu. More than 40,000 birds (including 26 rare species), from various parts of the world visit the sanctuary during the migratory season every year.Vedanthangal is home to migratory birds such as pintail, garganey, grey wagtail, blue-winged teal, common sandpiper and the like.It has been designated as a protected Ramsar site since 2022.</p>
+  
+  <p>
+    The best time to visit this sanctuary is from November to March. During this time, birds are seen busy building and maintaining their nests.
+
+    Villagers near this sanctuary are very concerned about the sanctuary and its winged residents, and they have taken many serious steps to avoid disturbance to the flow of birds.
+
+  </p>
+  </td>
+    
+  </tr>
+  
+  <tr>
+  <td style="padding:0px 30px;">
+  <h2>Birds Details</h2>
+  </td>
+  </tr>
+     
+  <tr>
+  <td colspan="6" style="padding:30px;">
+  <table border="1" style="width:100%">
+  <tr style="background:rgb(41, 160, 98)">
+  <th colspan="2" align="center" style="color:#fff; padding:10px;">Name</th>
+  <td colspan="2" align="center" style="color:#fff; padding:10px;">Wikipedia</td>
+  <td colspan="2" align="center" style="color:#fff; padding:10px;">Date and Time</td>
+  <td colspan="2" align="center" style="color:#fff; padding:10px;">Orgin</td>
+  </tr>
+  <td colspan="2"><ol>
+    {% for value in list1 %}
+    <li>{{ value }}</li><br>
+    {% endfor %}
+  </ol></td>
+  <td colspan="2"><ul>
+    {% for value in list1 %}
+    <li><p><a href="https://en.wikipedia.org/wiki/{{value}}">Know more</a></p></li>
+    {% endfor %}
+  </ul></td>
+  <td colspan="2"><ul>
+    {% for value in list3 %}
+    <li>{{ value }}</li><br>
+    {% endfor %}
+  </ul></td>
+  <td colspan="2"><ul>
+    {% for value in list2 %}
+    <li>{{ value }}</li><br>
+    {% endfor %}
+  </ul></td>
+   </td>
+  </tr>   
+  </table>
+  </td>
+  </tr>
+</body>
+</html>
